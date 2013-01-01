@@ -18,13 +18,16 @@ Or install it yourself as:
 
 ## Usage
 
-    use OmniAuth::Builder do
-      provider :familysearch_identity, ENV['FAMILYSEARCH_DEVELOPER_KEY'], ''
-    end
+```ruby
+use OmniAuth::Builder do
+  provider :familysearch_identity, ENV['FAMILYSEARCH_DEVELOPER_KEY'], ''
+end
+```
 
 ## Auth Hash
 
 Here's an example Auth Hash available in `request.env['omniauth.auth']`:
+
 ```ruby
 {
   "provider" => "familysearch_identity",
@@ -44,38 +47,38 @@ Here's an example Auth Hash available in `request.env['omniauth.auth']`:
     "access_token" => "56421fc9ac",
     "raw_info" => {
       "users" => [
-	"id" => "MMMM-QY4Y",
-	"username" => "jdoe",
-	"emails" => [
-	  {
-	    "type" => "Primary",
-	    "value" => "noreply@ldschurch.org"
-	  },
-	  {
-	    "type" => "Alternate",
-	    "value" => nil
-	  }
-	],
-	"names" => [
-	  {
-	    "type" => "Display",
-	    "value" => "John Doe"
-	  },
-	  {
-	    "type" => "Family",
-	    "value" => "Doe"
-	  },
-	  {
-	    "type" => "Given",
-	    "value" => "John"
-	  }
-	],
-	"preferences" => [
-	  {
-	    "name" => "language",
-	    "value" => "en"
-	  }
-	]
+        "id" => "MMMM-QY4Y",
+        "username" => "jdoe",
+        "emails" => [
+          {
+            "type" => "Primary",
+            "value" => "noreply@ldschurch.org"
+          },
+          {
+            "type" => "Alternate",
+            "value" => nil
+          }
+        ],
+        "names" => [
+          {
+            "type" => "Display",
+            "value" => "John Doe"
+          },
+          {
+            "type" => "Family",
+            "value" => "Doe"
+          },
+          {
+            "type" => "Given",
+            "value" => "John"
+          }
+        ],
+        "preferences" => [
+          {
+            "name" => "language",
+            "value" => "en"
+          }
+        ]
       ]
     }
   }
