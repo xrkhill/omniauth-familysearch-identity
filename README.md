@@ -22,6 +22,12 @@ Or install it yourself as:
 use OmniAuth::Builder do
   provider :familysearch_identity, ENV['FAMILYSEARCH_DEVELOPER_KEY'], ''
 end
+
+# To use the sandbox API
+use Omniauth::Builder do
+  provider :familysearch_identity, ENV['FAMILYSEARCH_DEVELOPER_KEY'], '',
+    :client_options => { :site => 'https://sandbox.familysearch.org' }
+end
 ```
 
 ## Auth Hash

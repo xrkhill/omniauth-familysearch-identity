@@ -13,7 +13,7 @@ module OmniAuth
 	:signature_method => 'PLAINTEXT',
 	:scheme => :query_string,
 	:http_method => :get,
-	:site => 'https://sandbox.familysearch.org',
+	:site => 'https://api.familysearch.org',
 	:request_token_path => '/identity/v2/request_token',
 	:access_token_path => '/identity/v2/access_token',
 	:authorize_path => '/identity/v2/authorize'
